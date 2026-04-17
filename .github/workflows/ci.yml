@@ -23,4 +23,4 @@ jobs:
         run: docker build -t app .
 
       - name: run container test
-        run: docker run -d -p 3000:3000 myapp
+        run: docker run -d -p 3000:3000 app
