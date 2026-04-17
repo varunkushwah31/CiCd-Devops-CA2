@@ -20,7 +20,7 @@ jobs:
       - run: npm test
 
       - name: build docker
-        run: docker build -t myapp .
+        run: docker build -t app .
 
       - name: run container test
         run: docker run -d -p 3000:3000 myapp
