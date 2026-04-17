@@ -1,6 +1,7 @@
-const e = require("express")
-const a = e()
+const r = require("supertest")
+const e = require("./index")
 
-a.get("/health",(r,s)=>s.send("Sab badhiya h..."))
-
-a.listen(3000,()=>console.log("running the code..."))
+test("health",async()=>{
+    const res = await r(e).get("/health")
+    expect(res.text).toBe("OK")
+})
